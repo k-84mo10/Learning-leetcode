@@ -5,6 +5,7 @@
         "xstring": "cpp",
         "iostream": "cpp",
         "ios": "cpp",
-        "xiosbase": "cpp"
+        "xiosbase": "cpp",
+        "unordered_map": "cpp"
     }
 }
