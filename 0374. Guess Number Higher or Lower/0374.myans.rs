@@ -13,13 +13,11 @@
         let mut right = n;
         while left < right {
             let mid = left + (right - left)/2;
-            let guess = guess(mid);
-            if (guess == 0) {
-                return mid;
-            } else if (guess == 1) {
-                left = mid+1;
-            } else {
-                right = mid-1;
+            match guess(mid) {
+                -1 => right = mid - 1,
+                0 => return mid,
+                1 => left = mid + 1,
+                _ => unreachable!(),
             }
         }
         left
